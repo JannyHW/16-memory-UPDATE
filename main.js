@@ -31,6 +31,7 @@ let card1 = null;
 let card2 = null;
 let hasFlipped = false;
 let stopClicks = false;
+let matchedNum = [];
 const cards = document.querySelectorAll(".card");
 
 //shuffle all 18 cards
@@ -66,6 +67,8 @@ function isMatch() {
   if (card1.dataset.title === card2.dataset.title) {
     card1.removeEventListener("click", flipCard);
     card2.removeEventListener("click", flipCard);
+    matchedNum.push(card1, card2);
+    result();
     return;
   }
   stopClicks = true;
@@ -74,6 +77,13 @@ function isMatch() {
     card2.classList.remove("flip");
     stopClicks = false;
   }, 1000);
+}
+
+//Wining Alert
+function result() {
+  if (matchedNum.length > 17) {
+    alert(" CONGRATS!!!🚀 You matched all of pairs!🥇");
+  }
 }
 
 function startGame() {
