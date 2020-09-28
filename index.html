@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory 🐸 Game</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- 1. MODAL SECTION-->
+    <div id="modal">
+      <div class="modalContent">
+        <img src="logo.png" alt="logo" />
+        <div id="btnModal"><img src="play.png" /></div>
+      </div>
+    </div>
+    <!-- 2. GAME SECTION-->
+    <div id="logo">
+      <img src="logo.png" />
+    </div>
+    <!-- create 18 cards -->
+    <div id="container">
+      <!-- injected from JS: <div class ="card"><i></i></div> -->
+    </div>
+    <!-- 3. reset -->
+    <div id="reset" onClick="location.reload()"><img src="reset.gif" /></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
